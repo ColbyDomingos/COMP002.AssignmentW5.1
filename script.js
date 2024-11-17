@@ -17,5 +17,13 @@ function primitiveMultiply(a, b) {
 }
 
 function reliableMultiply(a, b) {
-  // Your code here.
+  while (true){
+    try{
+      return primitiveMultiply(a, b);
+    } catch (e) {
+      console.log("Attempt failed, retying...");
+    }
+  }
 }
+
+console.log(reliableMultiply(8, 8));

@@ -25,7 +25,7 @@ function primitiveMultiply(a, b) {
  * @param {number} b - The second number to multiply.
  * @return {number} The result of a * b.
  */
-/******  497b6ec0-9dd3-4da1-b26f-f24e26e33882  *******/
+/******  b90ca3aa-1262-4a3f-87c8-23b36f3593a1  *******/
 function reliableMultiply(a, b) { // initializes the function
   while (true){ // sets a while loop that only acts when true
     try{ // attempts to run the primitive Multiply function 

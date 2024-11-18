@@ -16,14 +16,24 @@ function primitiveMultiply(a, b) {
   }
 }
 
-function reliableMultiply(a, b) {
-  while (true){
-    try{
-      return primitiveMultiply(a, b);
-    } catch (e) {
-      console.log("Attempt failed, retying...");
+/*************  ✨ Codeium Command ⭐  *************/
+/**
+ * Wraps the primitiveMultiply function and keeps trying until a call succeeds,
+ * after which it returns the result. Only handles MultiplicatorUnitFailure
+ * exceptions.
+ * @param {number} a - The first number to multiply.
+ * @param {number} b - The second number to multiply.
+ * @return {number} The result of a * b.
+ */
+/******  497b6ec0-9dd3-4da1-b26f-f24e26e33882  *******/
+function reliableMultiply(a, b) { // initializes the function
+  while (true){ // sets a while loop that only acts when true
+    try{ // attempts to run the primitive Multiply function 
+      return primitiveMultiply(a, b); // returns the result if possible
+    } catch (e) { // catches any errors which happens a lot
+      console.log("Attempt failed, retying..."); // logs the error and prints it to console
     }
   }
 }
 
-console.log(reliableMultiply(8, 8));
+console.log(reliableMultiply(8, 8)); // outputs 64 if no errors are thrown
